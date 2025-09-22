@@ -7,7 +7,7 @@ import numpy as np
 import pickle
 
 # Load the ANN trained model 
-model = tf.keras.models.load_model('model_tf2')
+model = tf.keras.models.load_model('model.h5')
 
 # Load Encoders and scaler
 with open('onehot_encoder_geo.pkl', 'rb') as file:
@@ -69,3 +69,4 @@ else:
     st.write('Customer is not likely to churn.')
 
 st.write(f'Churn probability: {prediction[0][0]:.2f}')
+
